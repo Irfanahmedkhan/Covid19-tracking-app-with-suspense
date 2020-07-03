@@ -1,26 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from "react";
+import GlobalData from "./Components/GlobalData";
+import "./App.css";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Suspense fallback={<h1>Laoding User ... </h1>}>
+        <div className="nav">Navbar</div>
+        <div className="main">MAP</div>
+        <div className="flag">Country Flags</div>
+        <div className="globaldata"> <GlobalData /> </div>
+        <div className="deaths">Total Deaths </div>
+        <div className="content1">Chart 1</div>
+        <div className="content2">Chart 2</div>
+        <div className="footer">Footer</div>
+      </Suspense>
     </div>
   );
-}
+};
+// const Profilpost = () => {
+//   const post = resource.post.read();
+
+//   return (
+//     <ul>
+//       <li>Latest post</li>
+
+//       {post.map((post) => (
+//         <li key={post.id}> {post.title} </li>
+
+//       ))}
+//     </ul>
+//   );
+// };
 
 export default App;
