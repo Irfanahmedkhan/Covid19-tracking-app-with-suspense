@@ -8,68 +8,72 @@
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.4fr 1.8fr 1.2fr 0.4fr;
-  grid-template-areas: "nav nav nav nav" "globaldata main main flag" "globaldata content1 content2 flag" "deaths footer footer flag";
+  grid-template-rows: 0.4fr 1.0fr 0.8fr 0.4fr;
+  grid-template-areas: "nav nav nav nav" "globaldata main main detailsdata" "content1 countrydata countrydata news" "content1 countrydata countrydata news";
   grid-gap: 0.4rem;
   font-family: "Inter", sans-serif;
   font-weight: 800;
   text-transform: uppercase;
   font-size: 12px;
-  color: #004d40;
+  color: white;
   text-align: center;
 }
 
 .nav {
-  background: #a7ffeb;
+  background: #3b3b3b;
   grid-area: nav;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
 
 .main {
-  background: #84ffff;
+  background: #3b3b3b;
   grid-area: main;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
 
-.flag {
-  background: #73ffba;
-  grid-area: flag;
+.news {
+  background: #3b3b3b;
+  grid-area: news;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
+  overflow: scroll;
 }
 
 .globaldata {
-  background: #18ffff;
+  background: #3b3b3b;
   grid-area: globaldata;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
+  height: 200px;
 }
 
-.deaths {
-  background: #18ffff;
-  grid-area: deaths;
+.countrydata {
+  background: #3b3b3b;
+  grid-area: countrydata;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
+  overflow: scroll;
 }
 
 .content1 {
-  background: #6fffd2;
+  background: #3b3b3b;
   grid-area: content1;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
 
-.content2 {
-  background: #64ffda;
-  grid-area: content2;
+.detailsdata {
+  background: #3b3b3b;
+  grid-area: detailsdata;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
+  overflow: scroll;
 }
 
 .footer {
-  background: #1de9b6;
+  background: #3b3b3b;
   grid-area: footer;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
@@ -79,6 +83,6 @@
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
-    grid-template-areas: "nav" "sidebar" "main" "content1" "content2" "content3" "footer";
+    grid-template-areas: "nav" "globaldata" "content1" "main" "detailsdata" "news" "countrydata";
   }
 }

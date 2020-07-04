@@ -1,0 +1,79 @@
+.main-container {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #3b3b3b;
+}
+
+.new {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    background-color: #1a1919;
+    border-radius: 10px;
+    transition: all 1s ease;
+    margin: 2%;
+    width: 90%;
+    padding: 2%;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    font-weight: 0px;
+}
+
+.new:hover {
+    transform: scale(1.05);
+    background-color: rgb(54, 118, 190);
+}
+
+.new>h2>img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.new>h2>a {
+    color: rgb(255, 48, 41);
+}
+
+.new>h2 {
+    margin: 5px 0;
+    font-size: 100%;
+}
+
+.blink {
+    font-family: sans-serif;
+    font-size: 30px;
+    animation: blink 1s linear infinite;
+}
+
+.blink img {
+    width: 40px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+        color: rgb(255, 0, 0);
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+        color: rgb(253, 253, 253);
+    }
+    100% {
+        color: rgb(165, 0, 0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 6 in) {
+    .new {
+        width: 90%;
+        flex-direction: column;
+    }
+    .new>img {
+        width: 50%;
+        height: auto;
+        border-radius: 10px;
+    }
+}

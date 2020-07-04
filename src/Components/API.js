@@ -1,10 +1,12 @@
 import axios from "axios";
 
 export const fetchData = () => {
-  const ApiPromise = fetchFromAPI();
+  const globalData = fetchglobaldata();
+  const countryData = fetchcountrydata();
 
   return {
-    user: wrapPromise(ApiPromise),
+    global: wrapPromise(globalData),
+    country: wrapPromise(countryData),
   };
 };
 
@@ -35,10 +37,18 @@ const wrapPromise = (promise) => {
   };
 };
 
-const fetchFromAPI = () => {
-  console.log("Fetch User..");
+const fetchcountrydata = () => {
+  console.log("Fetch fetchcountrydata..");
   return axios
-    .get(`https://covid19.mathdro.id/api`)
+    .get(`https://corona.lmao.ninja/v2/countries`)
+    .then((res) => res.data)
+    .catch((error) => console.log("error"));
+};
+
+const fetchglobaldata = () => {
+  console.log("Fetch fetchglobaldata..");
+  return axios
+    .get(`https://corona.lmao.ninja/v2/all`)
     .then((res) => res.data)
     .catch((error) => console.log("error"));
 };
