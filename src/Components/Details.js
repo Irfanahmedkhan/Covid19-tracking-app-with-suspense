@@ -57,15 +57,11 @@ function DetailsData() {
 
                           <tbody>
 
-                              {filterCountries.map((country, id) => {
-                                  return (
                                       <tr key={id}>
-                                          <th> {country.country} </th>
+                                          <th> {country.country}</th>
                                           <th>{country.country}</th>
 
                                       </tr>
-                                  );
-                              })}
                           </tbody>
                       </Table>
 
