@@ -3,6 +3,23 @@
     padding: 5px;
     background-color: brown;
     border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.card img {
+    width: 80%;
+    margin: 0px;
+    align-items: center;
+}
+
+.card span {
+    padding: 2px;
+    text-align: left;
+}
+
+.card div {
+    text-align: left;
 }
 
 .table th {

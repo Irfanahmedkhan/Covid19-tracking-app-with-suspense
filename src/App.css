@@ -9,7 +9,7 @@
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.4fr 1.0fr 0.8fr 0.4fr;
-  grid-template-areas: "nav nav nav nav" "globaldata main main detailsdata" "content1 countrydata countrydata news" "content1 countrydata countrydata news";
+  grid-template-areas: "nav nav nav nav" "globaldata main main detailsdata" "content1 countrydata countrydata detailsdata" "news countrydata countrydata detailsdata";
   grid-gap: 0.4rem;
   font-family: "Inter", sans-serif;
   font-weight: 800;

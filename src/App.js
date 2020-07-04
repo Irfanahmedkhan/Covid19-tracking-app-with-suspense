@@ -21,7 +21,7 @@ const App = () => {
 
         <div className="countrydata"> </div>
 
-        <div className="content1">Chart 1</div>
+        <div className="content1"><GlobalData /> </div>
 
         <div className="detailsdata"><DetailsData /></div>
 
