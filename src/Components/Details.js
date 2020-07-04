@@ -44,28 +44,8 @@ function DetailsData() {
           {filterCountries.map((country, id) => {
               return(
                   <div className='card' key={id}>  
-                      {/* <span><img src={country.countryInfo.flag} alt='country flag' /></span> */}
-                     
-                      <Table responsive className="table">
-                          <thead>
-                              <tr>
-                                                    
-                                  <td>total deaths</td>
-                                  <td>Active cases</td>
-                              </tr>
-                          </thead>
-
-                          <tbody>
-
-                                      <tr key={id}>
-                                          <th> {country.country}</th>
-                                          <th>{country.country}</th>
-
-                                      </tr>
-                          </tbody>
-                      </Table>
-
-
+                      <span><img src={country.countryInfo.flag} alt='country flag' /></span>
+                    
               </div>)
           })}
 
