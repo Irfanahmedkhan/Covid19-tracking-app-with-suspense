@@ -30,7 +30,7 @@ class News extends Component {
             <div className='main-container'>
 
 
-                <div className="blink"> <img src={pic} alt ='news image'/> <span>  Latest News</span></div>
+                <div className="blink"> <img src={pic} alt='blink' /> <span>  Latest News</span></div>
 
                 {this.state.articles.map((item, index) => {
 
@@ -39,7 +39,7 @@ class News extends Component {
 
                             <h2 >{item.title} <br />
                                 <a href={item.url} >Read More </a>
-                                <img src={item.urlToImage} alt ='image for ' />
+                                <img src={item.urlToImage} alt ='news' />
                             </h2>
 
                         </div>

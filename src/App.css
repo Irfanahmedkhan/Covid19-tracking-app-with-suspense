@@ -74,6 +74,6 @@
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
-    grid-template-areas: "nav" "globaldata" "content1" "main" "detailsdata" "news" "countrydata";
+    grid-template-areas: "nav" "globaldata" "content1" "main" "detailsdata" "countrydata" "news";
   }
 }

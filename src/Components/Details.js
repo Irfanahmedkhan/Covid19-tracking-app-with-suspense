@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Details.css";
+import Table from "react-bootstrap/Table";
+
 
 
 function DetailsData() {
@@ -42,7 +44,32 @@ function DetailsData() {
           {filterCountries.map((country, id) => {
               return(
                   <div className='card' key={id}>  
-                      {country.country} 
+                      {/* <span><img src={country.countryInfo.flag} alt='country flag' /></span> */}
+                     
+                      <Table responsive className="table">
+                          <thead>
+                              <tr>
+                                                    
+                                  <td>total deaths</td>
+                                  <td>Active cases</td>
+                              </tr>
+                          </thead>
+
+                          <tbody>
+
+                              {filterCountries.map((country, id) => {
+                                  return (
+                                      <tr key={id}>
+                                          <th> {country.country} </th>
+                                          <th>{country.country}</th>
+
+                                      </tr>
+                                  );
+                              })}
+                          </tbody>
+                      </Table>
+
+
               </div>)
           })}
 
