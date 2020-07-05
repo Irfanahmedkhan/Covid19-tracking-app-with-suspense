@@ -2,6 +2,7 @@ import React from 'react'
 import { fetchData } from "./API";
 import CountUp from 'react-countup';
 import "./GolobalData.css";
+// import { Line, bar } from "react-chartjs-2";
 
 
 const resource = fetchData();
@@ -10,13 +11,11 @@ const resource = fetchData();
 function GlobalData() {
     const global = resource.global.read();
 
-    console.log('global', global);
-    
 
     return (
         <div className='global'>
-            <h4>global data</h4>
 
+            <h4>global data</h4>
             <p>{new Date(global.updated).toDateString()}</p>
 
             <div className='confirmed'>

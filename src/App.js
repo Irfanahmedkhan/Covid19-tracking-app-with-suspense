@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import GlobalData from "./Components/GlobalData";
+import Charts from "./Components/Charts";
 import SimpleMap from "./Components/Googlemap";
 import "./App.css";
 import CountryData from "./Components/CountryData";
@@ -21,7 +22,8 @@ const App = () => {
 
         <div className="countrydata"> </div>
 
-        <div className="content1"><GlobalData /> </div>
+        <div className="content1"> <Charts />
+         </div>
 
         <div className="detailsdata"><DetailsData /></div>
 

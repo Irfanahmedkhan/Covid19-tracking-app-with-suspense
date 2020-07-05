@@ -55,12 +55,12 @@
 
 .form {
     padding: 5px;
-    color: white;
+    color: rgb(12, 139, 0);
 }
 
 .form input {
     padding: 10px;
-    background-color: #1a1919;
+    background-color: #026e26;
     color: white;
     border-radius: 10px;
     width: 50%;
