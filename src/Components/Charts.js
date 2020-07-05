@@ -1,8 +1,8 @@
 import React from "react";
 import { fetchData } from "./API";
 // import "./GolobalData.css";
-import { Line, Bar, Doughnut, Pie } from "react-chartjs-2";
-
+import { Pie } from "react-chartjs-2";
+// Line, Bar, Doughnut, 
 const resource = fetchData();
 
 function Charts() {
@@ -14,11 +14,13 @@ function Charts() {
     critical,
     deaths,
     recovered,
-    todayCases,
-    todayDeaths,
-    todayRecovered,
-    updated,
+
   } = global;
+
+    // todayCases,
+    // todayDeaths,
+    // todayRecovered,
+    // updated,
 
   const data = {
     labels: ["Cases", "Active", "Recovered", "critical", "Deaths"],
@@ -34,13 +36,13 @@ function Charts() {
     ],
   };
 
-  const option = {
-    title: {
-      display: true,
-      text: "Line Chart",
-    },
+//   const option = {
+//     title: {
+//       display: true,
+//       text: "Line Chart",
+//     },
 
-  };
+//   };
 
   return (
     <div className="global">
