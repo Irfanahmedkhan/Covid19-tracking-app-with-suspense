@@ -35,7 +35,7 @@ class News extends Component {
                 {this.state.articles.map((item, index) => {
 
                     return (
-                        <div className='new'>
+                        <div className='new' key ={index}>
 
                             <h2 >{item.title} <br />
                                 <a href={item.url} >Read More </a>
