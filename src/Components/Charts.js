@@ -1,8 +1,7 @@
 import React from "react";
 import { fetchData } from "./API";
 // import "./GolobalData.css";
-import { Pie } from "react-chartjs-2";
-// Line, Bar, Doughnut, 
+import {Pie, HorizontalBar } from "react-chartjs-2";
 const resource = fetchData();
 
 function Charts() {
@@ -11,7 +10,6 @@ function Charts() {
   const {
     active,
     cases,
-    critical,
     deaths,
     recovered,
 
@@ -21,34 +19,46 @@ function Charts() {
     // todayDeaths,
     // todayRecovered,
     // updated,
+// critical
 
   const data = {
-    labels: ["Cases", "Active", "Recovered", "critical", "Deaths"],
+    labels: ["Total Cases", "Active", "Recovered", "Deaths"],
     datasets: [
       {
-        label: "Global Data",
-        data: [cases, active, recovered, critical, deaths],
+        label: 'HorizontalBar Chart',
+        data: [cases, active, recovered, deaths],
         borderColor: ["#faa422", "#1c7ad1", "#026e26", "#e73d1f"],
         backgroundColor: ["#faa422", "#1c7ad1", "#026e26", "#e73d1f"],
-        pointBackgroundColor: "blue",
-        pointBorderColor: "yellow",
+      }, 
+    ],
+  };
+
+
+
+  const HBar = {
+    labels: ["Total Cases", "Active", "Recovered", "Deaths"],
+    datasets: [
+      {
+        label: 'HorizontalBar Chart',
+        data: [cases, active, recovered, deaths],
+        borderColor: ["#faa422", "#1c7ad1", "#026e26", "#e73d1f"],
+        backgroundColor: ["#faa422", "#1c7ad1", "#026e26", "#e73d1f"],
       },
     ],
   };
 
-//   const option = {
-//     title: {
-//       display: true,
-//       text: "Line Chart",
-//     },
 
-//   };
+
 
   return (
     <div className="global">
-          <Pie data={data} />
+      <Pie data={data} />
+      <HorizontalBar data={HBar} />
     </div>
   );
 }
+
+
+
 
 export default Charts;

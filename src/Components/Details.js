@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Details.css";
-
+import { Pie } from "react-chartjs-2";
 
 function DetailsData() {
   const [countryData, setcountryData] = useState([]);
@@ -23,9 +23,6 @@ function DetailsData() {
       : item;
   });
 
-
-
-
   return (
     <div className="country">
       <form className="form">
@@ -37,51 +34,38 @@ function DetailsData() {
       </form>
 
       <div>
-
         {filterCountries.map((country, id) => {
-          
+          //Country Chart
+          const { cases, recovered, active, deaths } = country;
+          const data = {
+            labels: ["Total Cases", "Active", "Recovered", "Deaths"],
+            datasets: [
+              {
+                label: "HorizontalBar Chart",
+                data: [cases, recovered, active, deaths],
+                borderColor: ["#faa422", "#1c7ad1", "#026e26", "#e73d1f"],
+                backgroundColor: ["#faa422", "#1c7ad1", "#026e26", "#e73d1f"],
+              },
+            ],
+          };
 
           return (
-            <div className="card" key={id}>
-              <div>
-                <img src={country.countryInfo.flag} alt="country flag" />{" "}
+            <div className="countrycard" key={id}>
+              <div className="flagcard">
+                <div>
+                  <img src={country.countryInfo.flag} alt="country flag" />{" "}
+                </div>
+                <div>
+                  <span>
+                    <h4>Country :</h4> {country.country}
+                  </span>
+                  <span>
+                    <h4>Country Population :</h4> {country.population}
+                  </span>
+                </div>
               </div>
-              <div>
-                <span>
-                  <h4>Country :</h4> {country.country}
-                </span>{" "}
-                <br />
-                <span>
-                  <h4>Country Population :</h4> {country.population}
-                </span>
-                <br />
-                <span>
-                  <h4>New Cases(24 Hrs) :</h4>
-                  {country.todayCases}
-                </span>
-                <br />
-                <span>
-                  <h4>Total Cases :</h4> {country.cases}
-                </span>
-                <br />
-                <span>
-                  <h4>New Recovered (24 Hrs)</h4>
-                  {country.todayRecovered}
-                </span>
-                <br />
-                <span>
-                  <h4>Total Recovered :</h4>
-                  {country.recovered}
-                </span>
-                <br />
-                <span>
-                  <h4>Crtical Condition :</h4> {country.critical}
-                </span>
-                <br />
-                <span>
-                  <h4>Total Deaths :</h4>
-                  {country.deaths}
-                </span>
+              <div className="countrychart">
+                <Pie data={data} />
               </div>
             </div>
           );

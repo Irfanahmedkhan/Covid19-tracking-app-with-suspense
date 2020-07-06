@@ -4,7 +4,7 @@ import Charts from "./Components/Charts";
 import SimpleMap from "./Components/Googlemap";
 import "./App.css";
 import CountryData from "./Components/CountryData";
-import News from "./Components/News";
+// import News from "./Components/News";
 import DetailsData from "./Components/Details";
 
 const App = () => {
@@ -16,7 +16,9 @@ const App = () => {
 
         <div className="main"><SimpleMap />       </div>
 
-        <div className="news"> <News />  </div>
+        <div className="news">
+           {/* <News /> */}
+             </div>
 
         <div className="globaldata"> <GlobalData /> </div>
 
