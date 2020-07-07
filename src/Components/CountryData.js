@@ -14,7 +14,6 @@ function CountryData() {
   const [searchCountries, setSearchCountries] = useState("");
 
 
-
   useEffect(() => {
     axios
       .get("https://corona.lmao.ninja/v2/countries")
@@ -41,7 +40,6 @@ function CountryData() {
       <form className='form'>
         <input type='search' placeholder='Search Country' onChange={(e) => setSearchCountries(e.target.value)}/>
       </form>
-
       <Table responsive className="table">
       
         <thead>
@@ -74,6 +72,8 @@ function CountryData() {
           })}
         </tbody>
       </Table>
+
+
     </div>
   );
 }

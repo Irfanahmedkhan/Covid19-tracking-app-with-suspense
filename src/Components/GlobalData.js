@@ -9,6 +9,7 @@ const resource = fetchData();
 
 
 function GlobalData() {
+    
     const global = resource.global.read();
 
 

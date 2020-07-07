@@ -34,6 +34,29 @@ function Charts() {
   };
 
 
+  const options = {
+    legend: false,
+    tooltip: true,
+    plugins: {
+      datalabels: {
+        align: "end",
+        anchor: "end",
+        backgroundColor: '#1a1919',
+        borderColor: null,
+        borderRadius: 2,
+        borderWidth: 1,
+        color: "white",
+        font: {
+          size: 10,
+          weight: 600,
+        },
+        offset: -10,
+        padding: 0,
+        formatter: 5,
+      },
+    },
+  };
+
 
   const HBar = {
     labels: ["Total Cases", "Active", "Recovered", "Deaths"],
@@ -48,12 +71,37 @@ function Charts() {
   };
 
 
+  const pieoptions = {
+    legend: false,
+    tooltip: true,
+    plugins: {
+      datalabels: {
+        align: "end",
+        anchor: "end",
+        backgroundColor: '#1a1919',
+        borderColor: null,
+        borderRadius: 2,
+        borderWidth: 1,
+        color: "white",
+        font: {
+          size: 11,
+          weight: 600,
+        },
+        offset: -35,
+        padding: 2,
+        formatter: 15,
+      },
+    },
+  };
+
+
+
 
 
   return (
     <div className="global">
-      <Pie data={data} />
-      <HorizontalBar data={HBar} />
+      <Pie data={data} options={pieoptions}/>
+      <HorizontalBar data={HBar} options={options} />
     </div>
   );
 }

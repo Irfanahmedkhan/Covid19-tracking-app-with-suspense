@@ -9,7 +9,7 @@
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.4fr 1.0fr 0.8fr 0.4fr;
-  grid-template-areas: "nav nav nav nav" "globaldata main main detailsdata" "content1 countrydata countrydata detailsdata" "news countrydata countrydata detailsdata";
+  grid-template-areas: "nav nav nav nav" "globaldata main main DetailsCountry" "globalchart countrydata countrydata DetailsCountry" "news countrydata countrydata DetailsCountry";
   grid-gap: 0.4rem;
   font-family: "Inter", sans-serif;
   font-weight: 800;
@@ -55,16 +55,16 @@
   padding-top: var(--main-padding);
 }
 
-.content1 {
+.globalchart {
   background: #3b3b3b;
-  grid-area: content1;
+  grid-area: globalchart;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
 }
 
-.detailsdata {
+.DetailsCountry {
   background: #3b3b3b;
-  grid-area: detailsdata;
+  grid-area: DetailsCountry;
   border-radius: var(--main-radius);
   padding-top: var(--main-padding);
   overflow: scroll;
@@ -72,8 +72,8 @@
 
 @media only screen and (max-width: 550px) {
   .container {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
-    grid-template-areas: "nav" "globaldata" "content1" "main" "detailsdata" "countrydata" "news";
+    grid-template-columns: 0.8fr;
+    grid-template-rows: 0.4fr 0.4fr 1.2fr 1.2fr 2.2fr 1.2fr 1fr;
+    grid-template-areas: "nav" "globaldata" "globalchart" "main" "DetailsCountry" "countrydata" "news";
   }
 }
