@@ -73,7 +73,6 @@ function Charts() {
 
   const pieoptions = {
     legend: false,
-    tooltip: true,
     plugins: {
       datalabels: {
         align: "end",
@@ -85,7 +84,7 @@ function Charts() {
         color: "white",
         font: {
           size: 11,
-          weight: 600,
+          weight: 800,
         },
         offset: -35,
         padding: 2,

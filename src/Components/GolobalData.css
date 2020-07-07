@@ -1,4 +1,4 @@
-.confirmed, .recovered, .deaths {
+.confirmed, .recovered, .deaths, h1 {
     color: aliceblue;
     display: flex;
     inline-size: auto;
@@ -10,26 +10,31 @@
 }
 
 .confirmed {
-    border-bottom: 10px solid rgba(255, 187, 0, 0.5);
+    background-color: #1a1919;
+    border-bottom: 5px solid #ffb84e;
+    padding: 5px;
 }
 
 .confirmed:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     background: linear-gradient(to right, #faa422, #ffb84e);
 }
 
 .recovered {
-    border-bottom: 10px solid #1c7ad1;
+    border-bottom: 5px solid #1c7ad1;
+    background-color: #1a1919;
+    padding: 5px;
 }
 
 .recovered:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     background: linear-gradient(to right, #1c7ad1, #309bff);
 }
 
 .deaths {
-    border-bottom: 10px solid #e73d1f;
-    
+    border-bottom: 5px solid #e73d1f;
+    padding: 5px;
+    background-color: #1a1919;
 }
 
 .deaths:hover {
@@ -37,8 +42,9 @@
     background: linear-gradient(to right, #e73d1f, #ff5031);
 }
 
+/* 
 @media screen and (max-width: 5in) {
     .cards {
         flex-direction: column;
     }
-}
+} */

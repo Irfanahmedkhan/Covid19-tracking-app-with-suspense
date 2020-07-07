@@ -73,7 +73,6 @@ function CountryData() {
         </tbody>
       </Table>
 
-
     </div>
   );
 }

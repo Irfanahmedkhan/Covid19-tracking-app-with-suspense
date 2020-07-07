@@ -16,22 +16,22 @@ function GlobalData() {
     return (
         <div className='global'>
 
-            <h4>global data</h4>
+            <h1>global data</h1>
             <p>{new Date(global.updated).toDateString()}</p>
 
             <div className='confirmed'>
-                <p>total confirmed</p>
-                <p><CountUp start={0} end={global.cases} duration={2.75} separator="," /></p>
+                <h3>total confirmed</h3>
+                <h3><CountUp start={0} end={global.cases} duration={2} separator="," /></h3>
             </div>
 
             <div className='recovered'> 
-                <p>total recovered</p>
-                <p><CountUp start={0} end={global.recovered} duration={2.75} separator="," /></p>
+                <h3>total recovered</h3>
+                <h3><CountUp start={0} end={global.recovered} duration={2} separator="," /></h3>
             </div>
 
             <div className='deaths'>
-                <p>total deaths</p>
-                <p><CountUp start={0} end={global.deaths} duration={2.75} separator="," /></p>
+                <h3>total deaths</h3>
+                <h3><CountUp start={0} end={global.deaths} duration={2} separator="," /></h3>
             </div>
 
         </div>

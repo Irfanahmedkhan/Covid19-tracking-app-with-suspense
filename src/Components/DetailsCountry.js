@@ -34,7 +34,7 @@ function CountryDetails() {
       <form className="form">
         <input
           type="search"
-          placeholder="Enter Country"
+          placeholder="Search Country"
           onChange={(e) => setSearchCountries(e.target.value)}
         />
       </form>
@@ -134,7 +134,7 @@ function CountryDetails() {
                 <img src={country.countryInfo.flag} alt="country flag" />
               </div>
 
-              <div className="countrydata">
+              <div className="name">
                 <h2>{country.country}</h2>
                 <span>
                   <h4>Country Papulation : </h4>

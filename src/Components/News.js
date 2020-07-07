@@ -1,39 +1,26 @@
 import React, { useEffect, useState } from "react";
+import axios from 'axios'
 import "./News.css";
-import pic from "../picture/pic.png";
+// import pic from "../picture/pic.png";
 
 const News = () => {
-    const [articles, setArticles] = useState([]);
+    const [data, setdata] = useState([]);
+    
+  
 
     useEffect(() => {
-        fetch(
-            https://newsapi.org/v2/everything?q=PAKISTAN&apiKey=d94c4c05ef02463b96a8607ef9314103
-        )
-            .then(response => {
-                console.log(response);
-                response.json();
-            })
-            .then(data => setArticles(data));
+      axios.get('https:newsapi.org/v2/everything?q=PAKISTAN&apiKey=d94c4c05ef02463b96a8607ef9314103')
+      .then(data => setdata(data));
+      
     }, []);
-
-    //   componentDidMount() {
-    //     fetch(
-    //       https://newsapi.org/v2/everything?q=PAKISTAN &apiKey=d94c4c05ef02463b96a8607ef9314103
-    //     )
-    //       .then(response => response.json())
-    //       .then(data => {
-    //         this.setState({ articles: data.articles });
-    //       });
-    //   }
 
     return (
         <div className="main-container">
-            <div className="blink">
-                {" "}
-                <img src={pic} alt="blink" /> <span> Latest News</span>
-            </div>
+        <ul>
+          {data.map((a, i) => <li key={i}>123</li>)}
+        </ul>
 
-            {/* {articles.map((item, index) => {
+           {/* {articles.map((item, index) => {
         return (
           <div className="new" key={index}>
             <h2>
@@ -43,7 +30,7 @@ const News = () => {
             </h2>
           </div>
         );
-      })} */}
+      })}  */}
         </div>
     );
 };

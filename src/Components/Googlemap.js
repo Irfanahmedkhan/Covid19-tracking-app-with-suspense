@@ -1,9 +1,10 @@
 import GoogleMapReact from "google-map-react";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import './GoogleMap.css'
 
 
-const SimpleMap= () => {
+const GoogleMap= () => {
 
   const [MapData, setMapData] = useState([]);
 
@@ -26,17 +27,17 @@ const SimpleMap= () => {
     lat={data.countryInfo.lat}
         lng={data.countryInfo.long}
       style={{
-        color:'White',
+        color:'red',
         height: '25px',
         width : '35px',
+        fontWeight: 800,
         textAlign : 'center',
-        backgroundColor:'#3b3b3b',
         borderRadius: '2px',
         padding : '2px'
       }}
     >
-        <img src={data.countryInfo.flag} alt='countryflags' height='10px'/>
-
+     <img src={data.countryInfo.flag} alt='countryflags' height='10px'/>
+     
       {data.cases}
     </div>
     )})
@@ -44,12 +45,15 @@ const SimpleMap= () => {
 
    return (
       // Important! Always set the container height explicitly
-      <div style={{ height: "50vh", width: "100%" }}>
+      <div style={{ height: "50vh", width: "100%" , borderRadius : '10%', }}>
+       {/* <button>Confirmed Cases</button>
+       <button>Recovered</button>
+       <button>Deaths</button> */}
 
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyAOvSZKGDxvrOabsPb9f_YUG3_d3I1fcis" }}
           defaultCenter={{  lat: 30.0, lng: 80.0,}}
-          defaultZoom={2}
+          defaultZoom={4}
         >
 
 {map}
@@ -58,4 +62,4 @@ const SimpleMap= () => {
     );
 }
 
-export default SimpleMap;
+export default GoogleMap;
