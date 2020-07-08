@@ -5,6 +5,7 @@ import { HorizontalBar } from "react-chartjs-2";
 import { defaults } from "react-chartjs-2";
 import "chartjs-plugin-datalabels";
 
+
 // defaults.global.defaultColor = 'red';
 defaults.global.defaultFontColor = "white";
 // defaults.global.defaultFontFamily = 'arial';
@@ -30,7 +31,7 @@ function CountryDetails() {
   });
 
   return (
-    <div className="country">
+    <div className="country" >
       <form className="form">
         <input
           type="search"
@@ -39,7 +40,7 @@ function CountryDetails() {
         />
       </form>
 
-      <div>
+      <div >
         {filterCountries.map((country, id) => {
           //Country Chart
 
@@ -129,7 +130,7 @@ function CountryDetails() {
           };
 
           return (
-            <div className="countrycard" key={id}>
+            <div className="countrycard" key={id} >
               <div className="countryflag">
                 <img src={country.countryInfo.flag} alt="country flag" />
               </div>

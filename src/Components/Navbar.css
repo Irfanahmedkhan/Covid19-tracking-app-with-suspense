@@ -1,0 +1,46 @@
+.navbar {
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #1a1919;
+}
+
+img {
+    width: 50%;
+    align-items: center;
+}
+
+img:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #e73d1f, #ff5031);
+
+}
+
+
+.navbar button {
+    margin: 10px;
+    background-color: #676869;
+    color: white;
+    border: none;
+}
+
+.navbar button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #e73d1f, #ff5031);
+}
+
+.github {
+    margin: 0px;
+    background-color: #676869;
+    color: white;
+    border: none;
+}
+
+@media only screen and (max-width: 550px) {
+    .navbar button {
+        margin: 5px;
+        font-size: 10px;
+        background-color: #676869;
+        color: white;
+        border: none;
+    }
+}

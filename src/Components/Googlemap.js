@@ -33,20 +33,19 @@ const GoogleMap= () => {
         fontWeight: 800,
         textAlign : 'center',
         borderRadius: '2px',
-        padding : '2px'
+                padding: 2 
       }}
     >
      <img src={data.countryInfo.flag} alt='countryflags' height='10px'/>
      
-      {data.cases}
+        {data.cases}
     </div>
     )})
   
 
    return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: "50vh", width: "100%" , borderRadius : '10%', }}>
-       {/* <button>Confirmed Cases</button>
+      <div style={{ height: "50vh", width: "100%"}}>
+       {/* <button>Confirmed</button>
        <button>Recovered</button>
        <button>Deaths</button> */}
 

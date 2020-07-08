@@ -35,6 +35,7 @@ function Charts() {
 
 
   const options = {
+  
     legend: false,
     tooltip: true,
     plugins: {
@@ -72,6 +73,12 @@ function Charts() {
 
 
   const pieoptions = {
+    title: {
+      display: true,
+      fontSize: 24,
+      fontColor: "White",
+            text: 'Global Data Chart',
+    },
     legend: false,
     plugins: {
       datalabels: {
