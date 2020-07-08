@@ -93,8 +93,8 @@
 @media only screen and (max-width: 550px) {
   .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas: "nav" "globaldata" "globalchart" "countrydata";
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "nav" "globaldata" "map" "globalchart" "countrydata";
   }
   .details {
     background: #3b3b3b;

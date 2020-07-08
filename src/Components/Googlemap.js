@@ -4,11 +4,9 @@ import axios from "axios";
 import './GoogleMap.css'
 
 
-const GoogleMap= () => {
-
+const GoogleMap= () => { 
+  
   const [MapData, setMapData] = useState([]);
-
-
 
   useEffect(() => {
     axios

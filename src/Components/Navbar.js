@@ -1,15 +1,20 @@
 import React, { useState } from "react";
 import sym from '../picture/sym.png'
 import sys from '../picture/sys.jpg'
+import c from '../picture/c.gif'
+import f from '../picture/f.gif'
+import t from '../picture/t.gif'
+
 
 import {
   AppBar,
   Toolbar,
-  IconButton,
+  // IconButton,
   Typography,
   Button,
+
 } from "@material-ui/core";
-import { AccountCircle, GitHub, AddBox } from "@material-ui/icons";
+import { AccountCircle, GitHub } from "@material-ui/icons";
 
 import Modal from "react-modal";
 import "./Navbar.css";
@@ -20,6 +25,7 @@ function Navbar() {
   return (
     <div className="navbar">
       <AppBar
+
         position="static"
         style={{
           backgroundColor: "#1a1919",
@@ -28,15 +34,16 @@ function Navbar() {
         }}
       >
         <Toolbar>
-          <IconButton edge="start" aria-label="menu">
-            <AddBox />
-          </IconButton>
+          <img src={c} alt="ca" style={{ width: '50px' }} />
+          <img src={f} alt="fe" style={{ width: '50px' }} />
+          <img src={t} alt="te" style={{ width: '50px' }} />
+
           <Typography variant="h6" style={{ flexGrow: 10, fontSize: 30, fontWeight: 800, textShadow: 'red' }}>
+
 COVID 19           </Typography>
           <Button onClick={() => setsymptoms(true)} style={{ backgroundColor: '#e73d1f' }}>symptoms / Precautions</Button>
                               
-          <Button style={{ backgroundColor: 'white', borderRadius: '30px',fontWeight: 800 }}
-              variant="link"
+          <Button style={{ backgroundColor: 'white', borderRadius: '20px',fontWeight: 800 }}
               startIcon={<GitHub />}
               href="https://github.com/Irfanahmedkhan"
             > Irfan Ahmed</Button>

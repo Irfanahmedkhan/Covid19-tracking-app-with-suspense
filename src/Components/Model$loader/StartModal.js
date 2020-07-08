@@ -2,8 +2,9 @@ import React, { useState } from "react";
 
 import Modal from "react-modal";
 
-import dua from '../../picture/dua.jpg'
-import pa from '../../picture/pa.jpg'
+import c from '../../picture/c.gif'
+import f from '../../picture/f.gif'
+import t from '../../picture/t.gif'
 
 
 
@@ -43,8 +44,9 @@ function StartModal() {
 
                 }}
             >
-                <img src={pa} alt='dua' />
-                <img src={dua} alt='dua' />
+                <img src={c} alt='dua' />
+                <img src={t} alt='dua' />
+                <img src={f} alt='dua' />
                 
                 <div>
                     <button

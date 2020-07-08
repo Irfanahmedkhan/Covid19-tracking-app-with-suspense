@@ -38,7 +38,7 @@ const wrapPromise = (promise) => {
 };
 
 const fetchcountrydata = () => {
-  console.log("Fetch fetchcountrydata..");
+  // console.log("Fetch fetchcountrydata..");
   return axios
     .get(`https://corona.lmao.ninja/v2/countries`)
     .then((res) => res.data)
@@ -46,7 +46,7 @@ const fetchcountrydata = () => {
 };
 
 const fetchglobaldata = () => {
-  console.log("Fetch fetchglobaldata..");
+  // console.log("Fetch fetchglobaldata..");
   return axios
     .get(`https://corona.lmao.ninja/v2/all`)
     .then((res) => res.data)
