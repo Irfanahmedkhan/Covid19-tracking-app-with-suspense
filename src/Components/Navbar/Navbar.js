@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import sym from '../picture/sym.png'
-import sys from '../picture/sys.jpg'
-import c from '../picture/c.gif'
-import f from '../picture/f.gif'
-import t from '../picture/t.gif'
+import sym from '../../picture/sym.png'
+import sys from '../../picture/sys.jpg'
+import c from '../../picture/c.gif'
+import f from '../../picture/f.gif'
+import t from '../../picture/t.gif'
 
 
 import {

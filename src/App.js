@@ -1,17 +1,18 @@
 import React, { Suspense } from "react";
-import GlobalData from "./Components/GlobalData";
-import Charts from "./Components/Charts";
-import GoogleMap from "./Components/Googlemap";
+import GlobalData from "./Components/GlobalData/GlobalData";
+import Charts from "./Components/GlobalChart/Charts";
+import GoogleMap from "./Components/GoogleMap/Googlemap";
 import "./App.css";
-import CountryData from "./Components/CountryData";
+import CountryData from "./Components/CountryData/CountryData";
 // import News from "./Components/News";
-import DetailsCountry from "./Components/DetailsCountry";
-import StartModal from "./Components/Model$loader/StartModal";
+import DetailsCountry from "./Components/DetailsCountry/DetailsCountry";
+import StartModal from "./Components/StartModal/StartModal";
+import Navbar from './Components/Navbar/Navbar'
+// Loading 
 import { CircleLoader } from 'react-spinners'
 import { css } from '@emotion/core'
-import Navbar from './Components/Navbar'
-
 const loader = css ` margin-top : 50%; `
+
 
 const App = () => {
 

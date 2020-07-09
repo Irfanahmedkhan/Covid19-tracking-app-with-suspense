@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchData } from "./API";
+import { fetchData } from "../API/API";
 import CountUp from 'react-countup';
 import "./GolobalData.css";
 // import { Line, bar } from "react-chartjs-2";

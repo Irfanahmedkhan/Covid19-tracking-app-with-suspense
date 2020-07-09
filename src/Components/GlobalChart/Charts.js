@@ -1,5 +1,5 @@
 import React from "react";
-import { fetchData } from "./API";
+import { fetchData } from "../API/API";
 // import "./GolobalData.css";
 import {Pie, HorizontalBar } from "react-chartjs-2";
 const resource = fetchData();
