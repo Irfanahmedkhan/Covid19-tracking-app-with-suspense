@@ -48,7 +48,7 @@ const GoogleMap= () => {
        <button>Deaths</button> */}
 
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyAOvSZKGDxvrOabsPb9f_YUG3_d3I1fcis" }}
+          bootstrapURLKeys={{ key: "AIzaSyB4TJ2RplVQoitaYOnTFZRmv7jWbhrAG-Q" }}
           defaultCenter={{  lat: 30.0, lng: 80.0,}}
           defaultZoom={4}
         >
