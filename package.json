@@ -16,7 +16,7 @@
     "chartjs-plugin-datalabels": "^0.7.0",
     "css-loader": "^3.6.0",
     "google-map-react": "^1.1.7",
-    "react": "0.0.0-experimental-7f28234f8",
+    "react": "0.14.0",
     "react-bootstrap": "^1.0.1",
     "react-chartjs-2": "^2.9.0",
     "react-countup": "^4.3.3",
